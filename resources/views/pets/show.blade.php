@@ -10,6 +10,9 @@
   <li>Full Name : {{ $client->first_name }} {{ $client->surname }}</li>
 </ul>
 
+{{-- <button><a href="{{  }}">Edit your pet</a></button> --}}
+
+
 <form action="/pets/{{$pet->id}}" method="POST">
     @csrf
     @method('DELETE')

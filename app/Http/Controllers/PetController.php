@@ -55,4 +55,26 @@ class PetController extends Controller
 
         return redirect(action('PetController@index'));
     }
+
+    // public function edit($id) {
+
+    //     $pet = Pet::findOrFail($id);
+
+    //     return view('pets/edit', compact('pet'));
+    // }
+
+    // public function update(Request $request, $id)
+    // {
+    //     $pet = Pet::findOrFail($id);
+
+    //     $pet->name = $request->input('name');
+    //     $pet->breed = $request->input('breed');
+    //     $pet->age = $request->input('age');
+    //     $pet->weight = $request->input('weight');
+    //     $pet->client_id = $request->input('owner_id');
+    //     $pet->photo = $request->input('photo');
+        
+    //     $pet->save();
+    //     return redirect(action('PetController@show'));
+    // }
 }

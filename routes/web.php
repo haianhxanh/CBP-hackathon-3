@@ -25,3 +25,7 @@ Route::get('/pets/{id}', 'PetController@show');
 
 Route::post('/pets/{id}', 'PetController@destroy');
 Route::post('/pets/create', 'PetController@store');
+
+// Route::get('/pets/{id}/edit', 'PetController@edit');
+
+Route::get('/home', 'HomeController@index');
