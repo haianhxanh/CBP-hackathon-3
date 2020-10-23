@@ -10,5 +10,10 @@
   <li>Full Name : {{ $client->first_name }} {{ $client->surname }}</li>
 </ul>
 
+<form action="/pets/{{$pet->id}}" method="POST">
+    @csrf
+    @method('DELETE')
+    <button>Delete Pet</button>
+</form>
 <img src="/images/pets/{{ $pet->photo }}" alt="{{ $pet->name }}">
 

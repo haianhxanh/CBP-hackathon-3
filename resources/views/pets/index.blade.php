@@ -1,6 +1,6 @@
 <h1>List of Pets</h1>
 
-<button style="padding: 1%"><a style="text-decoration: none" href="http://www.hackathon.test/create">Add your pet</a></button>
+<button style="padding: 1%"><a style="text-decoration: none" href="http://www.hackathon.test/pets/create">Add your pet</a></button>
 
 @foreach($pets as $p)
 <h2>{{$p->name}}</h2>

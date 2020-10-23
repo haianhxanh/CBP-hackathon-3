@@ -23,4 +23,36 @@ class PetController extends Controller
 
         return view('pets/show', compact('pet','clients', 'client'));
     }
+
+    public function destroy($id)
+    {
+        $pet = Pet::findOrFail('id');
+        $pet->delete();
+
+        return view('pets/index', compact('pet'));
+    
+    }
+    
+        public function create()
+    {
+        
+        return view('pets/create');
+        
+    }
+
+    public function store(Request $request)
+    {
+        $pet = new Pet;
+
+        $pet->name = $request->input('name');
+        $pet->breed = $request->input('breed');
+        $pet->age = $request->input('age');
+        $pet->weight = $request->input('weight');
+        $pet->client_id = $request->input('owner_id');
+        $pet->photo = $request->input('photo');
+        
+        $pet->save();
+
+        return redirect(action('PetController@index'));
+    }
 }
