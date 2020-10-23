@@ -26,6 +26,8 @@ class PetController extends Controller
     public function destroy($id)
     {
         $pet = Pet::findOrFail('id');
+        $pet->delete();
+
         return view('pets/index', compact('pet'));
     }
 }

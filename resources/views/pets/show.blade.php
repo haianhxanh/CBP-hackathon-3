@@ -8,4 +8,9 @@
 
 <img src="/images/pets/{{ $pet->photo }}" alt="{{ $pet->name }}">
 
+<form action="/pets/{{$pet->id}}" method="POST">
+    @csrf
+    @method('DELETE')
+    <button>Delete Pet</button>
+</form>
 
