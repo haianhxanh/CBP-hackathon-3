@@ -19,7 +19,8 @@ class PetController extends Controller
         $pet = Pet::findOrFail($id);
         $clients = Client::all();
 
+        $client = Client::find($pet->client_id);
 
-        return view('pets/show', compact('pet','clients'));
+        return view('pets/show', compact('pet','clients', 'client'));
     }
 }
