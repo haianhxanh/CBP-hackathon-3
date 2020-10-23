@@ -22,4 +22,10 @@ class PetController extends Controller
 
         return view('pets/show', compact('pet','clients'));
     }
+
+    public function destroy($id)
+    {
+        $pet = Pet::findOrFail('id');
+        return view('pets/index', compact('pet'));
+    }
 }
