@@ -19,4 +19,10 @@ class PetController extends Controller
         $pet = Pet::findOrFail('id');
         return view('/pets/show', compact('pet'));
     }
+
+    public function destroy($id)
+    {
+        $pet = Pet::findOrFail('id');
+        return view('pets/index', compact('pet'));
+    }
 }
