@@ -52,7 +52,7 @@ class PetController extends Controller
         
         $pet->save();
 
-        return $pet;
-        // return redirect(action('PetController@index'));
+        
+        return redirect(action('PetController@index'));
     }
 }

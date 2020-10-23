@@ -25,3 +25,9 @@ Route::get('/pets/{id}', 'PetController@show');
 
 Route::post('/pets/create', 'PetController@store');
 Route::delete('/pets/{id}', 'PetController@destroy');
+
+// Client
+Route::get('/clients', 'ClientController@index');
+Route::get('/clients/create', 'ClientController@create');
+Route::get('/clients/{id}', 'ClientController@show');
+Route::post('/clients/create', 'ClientController@store');
