@@ -6,4 +6,6 @@
 
 <img src="/images/pets/{{$p->photo}}">
 {{-- asset($pet->image_file) --}}
+<!-- <a href="{{}}"></a> -->
+
 @endforeach
