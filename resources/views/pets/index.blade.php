@@ -5,7 +5,7 @@
 <h3>Breed: {{$p->breed}}</h3>
 
 <img src="/images/pets/{{$p->photo}}">
-{{-- asset($pet->image_file) --}}
+
 <!-- <a href="{{}}"></a> -->
 
 @endforeach
