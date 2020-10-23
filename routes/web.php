@@ -20,6 +20,11 @@ Route::get('/', function () {
 Route::get('/test', 'TestController@index');
 
 Route::get('/pets', 'PetController@index');
+Route::get('/pets/create', 'PetController@create');
 Route::get('/pets/{id}', 'PetController@show');
+<<<<<<< HEAD
 
 Route::post('/pets/{id}', 'PetController@destroy');
+=======
+Route::post('/pets/create', 'PetController@store');
+>>>>>>> 00df30a0cf06baf06a827855baa0e331ecd83fc0
