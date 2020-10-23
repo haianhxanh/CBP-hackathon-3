@@ -21,7 +21,7 @@ class CreatePetsTable extends Migration
             $table->integer('age')->nullable();
             $table->integer('weight')->nullable();
             $table->unsignedBigInteger('client_id');
-            $table->string('image')->nullable();
+            $table->string('photo')->nullable();
             $table->timestamps();
         });
     }
