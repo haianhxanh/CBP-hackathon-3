@@ -21,3 +21,5 @@ Route::get('/test', 'TestController@index');
 
 Route::get('/pets', 'PetController@index');
 Route::get('/pets/{id}', 'PetController@show');
+
+Route::post('/pets/{id}', 'PetController@destroy');
