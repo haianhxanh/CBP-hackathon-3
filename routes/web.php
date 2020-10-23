@@ -20,4 +20,6 @@ Route::get('/', function () {
 Route::get('/test', 'TestController@index');
 
 Route::get('/pets', 'PetController@index');
+Route::get('/pets/create', 'PetController@create');
 Route::get('/pets/{id}', 'PetController@show');
+Route::post('/pets/create', 'PetController@store');
