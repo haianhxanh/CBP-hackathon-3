@@ -26,11 +26,10 @@ class PetController extends Controller
 
     public function destroy($id)
     {
-        $pet = Pet::findOrFail('id');
+        $pet = Pet::findOrFail($id);
         $pet->delete();
 
-        return view('pets/index', compact('pet'));
-    
+        return redirect('/pets');
     }
     
         public function create()
@@ -53,6 +52,7 @@ class PetController extends Controller
         
         $pet->save();
 
-        return redirect(action('PetController@index'));
+        return $pet;
+        // return redirect(action('PetController@index'));
     }
 }
