@@ -31,3 +31,7 @@ Route::get('/clients', 'ClientController@index');
 Route::get('/clients/create', 'ClientController@create');
 Route::get('/clients/{id}', 'ClientController@show');
 Route::post('/clients/create', 'ClientController@store');
+
+// Route::get('/pets/{id}/edit', 'PetController@edit');
+
+Route::get('/home', 'HomeController@index');
