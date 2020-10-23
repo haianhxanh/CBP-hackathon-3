@@ -28,7 +28,14 @@ class ClientController extends Controller
 
     public function store(Request $request)
     {
-    
+        $request = request();
+
+        $this->validate($request, [
+            'first_name' => 'required',
+            'surname' => 'required',
+            'email' => 'required'
+        ]);
+
         $client = new Client;
 
         $client->first_name = $request->input('first_name');

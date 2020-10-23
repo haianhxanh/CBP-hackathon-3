@@ -41,6 +41,14 @@ class PetController extends Controller
 
     public function store(Request $request)
     {
+        $request = request();
+        
+        $this->validate($request, [
+            'name' => 'required',
+            'breed' => 'required',
+            'age' => 'required'
+        ]);
+
         $pet = new Pet;
 
         $pet->name = $request->input('name');
