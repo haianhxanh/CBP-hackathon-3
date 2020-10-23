@@ -19,19 +19,21 @@ class PetController extends Controller
         $pet = Pet::findOrFail($id);
         $clients = Client::all();
 
+        $client = Client::find($pet->client_id);
 
-        return view('pets/show', compact('pet','clients'));
+        return view('pets/show', compact('pet','clients', 'client'));
     }
 
-<<<<<<< HEAD
     public function destroy($id)
     {
         $pet = Pet::findOrFail('id');
         $pet->delete();
 
         return view('pets/index', compact('pet'));
-=======
-    public function create()
+    
+    }
+    
+        public function create()
     {
         
         return view('pets/create');
@@ -52,6 +54,5 @@ class PetController extends Controller
         $pet->save();
 
         return redirect(action('PetController@index'));
->>>>>>> 00df30a0cf06baf06a827855baa0e331ecd83fc0
     }
 }
